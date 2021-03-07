@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  playlist: MyString
+  timer_interval: 1
+  timer_break: 1
+
+two:
+  name: MyString
+  playlist: MyString
+  timer_interval: 1
+  timer_break: 1
