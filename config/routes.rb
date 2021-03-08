@@ -15,7 +15,6 @@ patch '/users/:id', to: 'users#update'
 
 get '/tasks/:id', to: 'tasks#show' 
 post '/tasks', to: 'tasks#create'
-
 delete '/tasks/:id', to: 'tasks#destroy'
 
 ###StudySessions
