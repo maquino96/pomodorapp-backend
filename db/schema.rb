@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2021_03_07_174542) do
 
   create_table "study_sessions", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.datetime "total_time"
+    t.datetime "finished_time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_study_sessions_on_user_id"
