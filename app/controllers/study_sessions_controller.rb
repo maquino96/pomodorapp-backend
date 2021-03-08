@@ -14,7 +14,7 @@ class StudySessionsController < ApplicationController
 
     def update
         @study_session = StudySession.find(params[:id])
-        @study_session.update(finished_time: DateTime.now)
+        @study_session.update(finished_time: DateTime.now.in_time_zone(eastern_time))
         render json: @study_session
     end 
 
