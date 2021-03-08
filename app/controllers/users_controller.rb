@@ -32,6 +32,16 @@ class UsersController < ApplicationController
         render json: @user
     end 
 
+    def tasks
+        @user = User.find(params[:id])
+        render json: @user.checklist_tasks
+    end 
+
+    def sessions 
+        @user = User.find(params[:id])
+        render json: @user.study_sessions
+    end 
+
     private 
 
     def user_params

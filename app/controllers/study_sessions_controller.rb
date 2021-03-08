@@ -24,6 +24,11 @@ class StudySessionsController < ApplicationController
         render json: @study_session 
     end 
 
+    def tasks
+        @study_session = StudySession.find(params[:id])
+        render json: @study_session.tasks
+    end 
+
     private
 
     def study_session_params

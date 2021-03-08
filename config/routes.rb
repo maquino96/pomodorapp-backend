@@ -6,7 +6,10 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
 ###Users
+
 post '/users/login', to: 'users#login'  
+get '/users/:id/sessions', to: 'users#sessions'
+get '/users/:id/tasks', to: 'users#tasks'
 get '/users/:id', to: 'users#show' 
 post '/users', to: 'users#create'
 patch '/users/:id', to: 'users#update' 
@@ -19,6 +22,7 @@ delete '/tasks/:id', to: 'tasks#destroy'
 
 ###StudySessions
 
+get '/study_sessions/:id/tasks', to: 'study_sessions#tasks' 
 get '/study_sessions/:id', to: 'study_sessions#show' 
 post '/study_sessions', to: 'study_sessions#create'
 patch '/study_sessions/:id', to: 'study_sessions#update' 
