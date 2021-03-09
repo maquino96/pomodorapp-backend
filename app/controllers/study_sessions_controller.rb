@@ -14,7 +14,7 @@ class StudySessionsController < ApplicationController
 
     def update
         @study_session = StudySession.find(params[:id])
-        @study_session.update(finished_time: DateTime.now)
+        @study_session.update(finished_time: TimeDifference.between(@study_session.created_at, Time.now).in_seconds)
         render json: @study_session
     end 
 
