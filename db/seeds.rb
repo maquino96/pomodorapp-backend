@@ -23,3 +23,7 @@ u2.tasks.create(name:'Task7')
 u3.tasks.create(name:'Task8')
 u3.tasks.create(name:'Task9')
 
+s1 = u1.study_sessions.create()
+st1 = s1.study_tasks.create(task_id: 1)
+st2 = s1.study_tasks.create(task_id: 2)
+s1.update(finished_time: DateTime.now)
