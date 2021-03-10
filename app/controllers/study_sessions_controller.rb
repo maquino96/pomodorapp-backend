@@ -14,7 +14,7 @@ class StudySessionsController < ApplicationController
 
     def update
         @study_session = StudySession.find(params[:id])
-        @study_session.update(finished_time: TimeDifference.between(@study_session.created_at, Time.now).in_seconds)
+        @study_session.update(time_spent: TimeDifference.between(@study_session.created_at, Time.now).in_seconds)
         render json: @study_session
     end 
 
@@ -32,6 +32,6 @@ class StudySessionsController < ApplicationController
     private
 
     def study_session_params
-        params.require(:study_session).permit(:user_id, :finished_time)
+        params.require(:study_session).permit(:user_id, :time_spent)
     end
 end
