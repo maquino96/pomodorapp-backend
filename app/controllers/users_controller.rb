@@ -7,7 +7,7 @@ class UsersController < ApplicationController
         if @user 
             render json: @user
         else 
-            render json: ('You must register. User not found.').to_json
+            render json: false
         end 
     end 
 
@@ -19,10 +19,11 @@ class UsersController < ApplicationController
     def create
 
         @user = User.create(user_params)
+        
         if @user.valid?
             render json: @user
         else 
-            render json: (@user.errors.full_messages[0]).to_json
+            render json: false
         end 
     end 
 
