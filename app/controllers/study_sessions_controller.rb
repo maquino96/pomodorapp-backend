@@ -9,7 +9,6 @@ class StudySessionsController < ApplicationController
         @study_session = StudySession.create(study_session_params)
         puts params
         render json: @study_session 
-        
     end 
 
     def update
